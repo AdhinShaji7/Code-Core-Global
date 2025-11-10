@@ -1,0 +1,147 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .todo-container {
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    width: 380px;
+    max-width: 90%;
+    transition: transform 0.2s ease-in-out;
+  }
+  .todo-container:hover {
+    transform: translateY(-5px);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  
+  form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  input[type="text"]:focus {
+    border: 1.5px solid #74ebd5;
+    box-shadow: 0 0 6px rgba(116,235,213,0.6);
+  }
+  
+  button {
+    padding: 12px 18px;
+    border: none;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s, transform 0.2s;
+  }
+  button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  
+  .error {
+    color: crimson;
+    font-size: 0.85em;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 12px 14px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: background 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.4s forwards;
+  }
+  li:hover {
+    background: #f1f1f1;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .delete-btn {
+    background: crimson;
+    border: none;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .delete-btn:hover {
+    background: #a50000;
+  }
+  
+
+  @media (max-width: 600px) {
+    body {
+      padding: 20px;
+      height: auto;
+    }
+    .todo-container {
+      width: 100%;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    h2 {
+      font-size: 1.3rem;
+    }
+    input[type="text"] {
+      font-size: 13px;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 14px;
+      font-size: 13px;
+    }
+    li {
+      font-size: 13px;
+      padding: 10px 12px;
+    }
+  }
+  
